@@ -8,10 +8,10 @@ size = 0
 
 # set up the connection details
 config = {
-    'user': 'root',
-    'password': '12345678',
-    'host': '127.0.0.1',
-    'database': 'embedded'
+    'user': 'xxxxxxx',
+    'password': 'xxxxxxxxx',
+    'host': 'xxxxxxxxx',
+    'database': 'xxxxxxxxx'
 }
 
 # connect to the database
@@ -19,7 +19,7 @@ cnx = mysql.connector.connect(**config)
 
 # perform some queries, for example:
 cursor = cnx.cursor()
-query = "SELECT * FROM cards"
+query = "SELECT * FROM table_name"
 cursor.execute(query)
 results = cursor.fetchall()
 
@@ -27,7 +27,7 @@ results = cursor.fetchall()
 cnx.close()
 
 # Define the serial port and baud rate
-ser = serial.Serial('/dev/cu.usbmodem14201', 9600)
+ser = serial.Serial('USBPORT', 9600)
 
 while True:
     # Read data from the serial port
